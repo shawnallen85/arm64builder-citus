@@ -12,5 +12,5 @@
 
 ```bash
 git clone git@github.com:shawnallen85/arm64builder-citus.git
-arm64builder-citus/$(lsb_release -c)/build-citus.sh
+arm64builder-citus/$(lsb_release -sc)/build-citus.sh
 ```
