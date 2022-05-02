@@ -1,0 +1,17 @@
+Package: postgresql-14-citus-10.2
+Source: citus
+Version: {{ environ('CITUS_VERSION') }}.citus-1
+Architecture: {{ environ('BUILD_ARCH') }}
+Maintainer: Citus Data <packaging@citusdata.com>; Shawn Black <shawn@castleblack.us>
+Depends: libc6 (>= {{ environ('LIBC6_VER') }}), libcurl4 (>= {{ environ('LIBCURL4_VER') }}), liblz4-1 (>= {{ environ('LIBLZ4_1_VER') }}), libpq5 (>= {{ environ('LIBPQ5_VER') }}), libssl3 (>= {{ environ('LIBSSL3_VER') }}), libzstd1 (>= {{ environ('LIBZSTD1_VER') }}), postgresql-14
+Conflicts: postgresql-14-citus
+Provides: postgresql-14-citus
+Section: database
+Priority: optional
+Homepage: https://github.com/citusdata/citus
+Description: sharding and distributed joins for PostgreSQL
+ Citus is a distributed database implemented as a PostgreSQL extension. It
+ provides functions to easily split a PostgreSQL table into shards to be
+ placed on remote worker nodes. Citus can replicate shards, update their
+ schemas, and keep track of shard health. An advanced distributed planner
+ is included which handles queries and modifications against sharded tables.
