@@ -18,7 +18,7 @@ buildah bud -t citus-10.2-pgsql-12-builder -f citus.Containerfile \
     --build-arg TINI_SHA=${TINI_SHA:-eae1d3aa50c48fb23b8cbdf4e369d0910dfc538566bfd09df89a774aa84a48b9} \
     ${SCRIPT_DIR}
 
-mkdir ~/citus-build/12
+mkdir -p ~/citus-build/12
 
 podman run --rm -v ~/citus-build/12:/var/output:z citus-10.2-pgsql-12-builder
 

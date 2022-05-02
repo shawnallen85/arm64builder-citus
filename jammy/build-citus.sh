@@ -14,7 +14,7 @@ buildah bud -t citus-10.2-pgsql-14-builder -f citus.Containerfile \
     --build-arg BUILD_ARCH=${BUILD_ARCH:-arm64} \
     ${SCRIPT_DIR}
 
-mkdir ~/citus-build/14
+mkdir -p ~/citus-build/14
 
 podman run --rm -v ~/citus-build/14:/var/output:z citus-10.2-pgsql-14-builder
 
