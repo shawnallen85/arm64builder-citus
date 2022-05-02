@@ -14,7 +14,7 @@ export LIBLZ4_1_VER
 LIBPQ5_VER=$(package_version libpq5)
 export LIBPQ5_VER
 LIBSSL3_VER=$(package_version libssl3)
-export LIBSSL1_1_VER
+export LIBSSL3_VER
 LIBZSTD1_VER=$(package_version libzstd1)
 export LIBZSTD1_VER
 
